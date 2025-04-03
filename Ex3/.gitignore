@@ -2,7 +2,9 @@
 ../out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
+Ex3.iml
+Ex2.iml
+Ex1.iml
 ### Eclipse ###
 .apt_generated
 .classpath
