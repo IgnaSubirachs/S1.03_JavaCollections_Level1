@@ -26,20 +26,30 @@ public class Main {
         months.add(month10);
         months.add(month11);
         months.add(month12);
+        System.out.println("Initial list of months (excluding August):");
+        System.out.println(months);
         months.add(7, new Month("August"));
-
+        System.out.println("List after inserting August in correct position:");
+        System.out.println(months);
+        System.out.println("--------------");
+        System.out.println("List of Months using Loop: ");
         for (Month month : months) {
             System.out.println(month.getName());
         }
 
         HashSet<Month> monthSet = new HashSet<>(months);
         boolean added = monthSet.add(new Month("January"));
-        System.out.println("\nTrying to add again in the HashSet...");
+        System.out.println("----------------");
+        System.out.println("\nTrying to add again Janueary in the HashSet...");
         System.out.println("Was it added correctly? " + added);
 
+        System.out.println("----------------");
+        System.out.println("Iterating using for loop:");
         for (Month month : monthSet) {
             System.out.println(month);
         }
+        System.out.println("----------------");
+        System.out.println("Iterating using Iterator:");
         Iterator<Month> iterator = monthSet.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
