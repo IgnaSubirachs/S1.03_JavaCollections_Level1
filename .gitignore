@@ -2,9 +2,10 @@
 ../out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-Ex3.iml
+Ex3/Ex3.iml
 Ex2.iml
 Ex1.iml
+S1.03_JavaCollections_Level1.iml
 ### Eclipse ###
 .apt_generated
 .classpath
