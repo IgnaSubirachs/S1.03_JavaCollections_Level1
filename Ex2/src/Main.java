@@ -1,22 +1,26 @@
-import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
-        System.out.println("First integer list" + numbers);
-        List<Integer> numbersReversed = new ArrayList<>();
-        ListIterator<Integer> iterator = numbers.listIterator(numbers.size());
-        while (iterator.hasPrevious()) {
-            numbersReversed.add(iterator.previous());
+
+        List<Integer> numbers = ListManager.getIntegers();
+        System.out.println("Integer list: ");
+        for (Integer numb : numbers) {
+            System.out.println(numb);
         }
-        System.out.println("Second integer reversed list" + numbersReversed);
+        List<Integer> numbersReversed = ListManager.reversedInteger(numbers);
+        System.out.println("Reverse list: ");
+        for (Integer numb : numbersReversed) {
+            System.out.println(numb);
+        }
+        List<Integer> numbersReversedIterator = ListManager.reverseIterator(numbers, numbersReversed);
+        System.out.println("Reverse iterator list with list: ");
+        for (Integer numb : numbersReversedIterator) {
+            System.out.println(numb);
+        }
+
 
     }
+
+
 }
